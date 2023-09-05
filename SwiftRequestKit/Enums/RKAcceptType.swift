@@ -4,6 +4,7 @@
 //
 //  Created by Bogdan Filippov on 9/5/23.
 //  Copyright © 2023 Bogdan Filippov. All rights reserved.
+//
 
 /// Represents various accept types for a network request.
 enum RKAcceptType: String {
