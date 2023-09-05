@@ -4,7 +4,7 @@ Pod::Spec.new do |s|
   s.version          = '0.1.0'
   s.summary          = 'SwiftRequestKit is an SDK for making network requests in Swift.'
   s.description      = <<-DESC
-                       A longer description of SwiftRequestKit SDK.
+                       SwiftRequestKit is an extensive SDK designed for making network requests in Swift. It provides a simplified interface for API calls, response handling, and error management.
                        DESC
   s.homepage         = 'https://philippovs.com'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
@@ -14,4 +14,5 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '12.0'
   s.source_files     = 'SwiftRequestKit/**/*.{h,m,swift}'
   s.frameworks       = 'Foundation', 'UIKit'
+  s.swift_versions   = ['4.0']
 end
