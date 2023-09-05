@@ -14,15 +14,15 @@ class RKNetworkService {
     // MARK: - Properties
         
     /// URLSession to execute the network tasks.
-    private lazy var session: URLSession = {
+    lazy var session: URLSession = {
         return URLSession(configuration: .default)
     }()
     /// Active URLSessionDataTask that can be managed if required.
-    private var sessionDataTask: URLSessionDataTask?
+    var sessionDataTask: URLSessionDataTask?
     /// DispatchQueue on which the completion handlers will be executed.
-    private let queue: DispatchQueue
+    let queue: DispatchQueue
     /// If set to true, debug information will be printed using the RKDebugger.
-    private let repairMode: Bool
+    let repairMode: Bool
     
     // MARK: - Initializers
     

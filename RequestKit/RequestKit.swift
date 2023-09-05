@@ -107,16 +107,18 @@ class RequestKit {
     
     // MARK: - Network Service Methods
     
-    func downloadData(completion: @escaping (Data?, Int?, RKError?) -> ()) {
+    func downloadData(completion: @escaping (Data?, Int?, RKError?) -> ()) -> URLSessionDataTask? {
         let request = configurateRequest()
         networkService = RKNetworkService(queue: queue, repairMode: repairMode)
         networkService?.downloadData(with: request, completion: completion)
+        return networkService?.sessionDataTask
     }
     
-    func sendRequest<Type: Codable>(completion: @escaping (Type?, Int?, RKError?) -> Void) {
+    func sendRequest<Type: Codable>(completion: @escaping (Type?, Int?, RKError?) -> Void) -> URLSessionDataTask? {
         let request = configurateRequest()
         networkService = RKNetworkService(queue: queue, repairMode: repairMode)
         networkService?.sendRequest(with: request, completion: completion)
+        return networkService?.sessionDataTask
     }
     
     // MARK: - Private Utility Methods
