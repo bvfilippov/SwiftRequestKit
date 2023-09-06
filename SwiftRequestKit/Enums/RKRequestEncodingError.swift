@@ -7,7 +7,7 @@
 //
 
 /// Defines the set of errors that can be thrown by the `RKRequestEncoder`.
-enum RKRequestEncodingError: Error {
+public enum RKRequestEncodingError: Error {
     case encodingFailed
     case invalidURL
 }

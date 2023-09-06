@@ -10,7 +10,7 @@
 ///
 /// MIME types (Multipurpose Internet Mail Extensions) are a way of identifying files on the Internet according to their nature and format.
 /// For example, using the "Content-Type" header value defined in a HTTP response, the browser can open the file with the appropriate extension or plugin.
-enum RKMimeType {
+public enum RKMimeType {
     
     // MARK: - Cases
     
@@ -26,7 +26,7 @@ enum RKMimeType {
     // MARK: - Properties
     
     /// Returns the standard file extension for the associated format.
-    var fileExtension: String {
+    public var fileExtension: String {
         switch self {
         case .jpeg:
             return "jpeg"
@@ -40,7 +40,7 @@ enum RKMimeType {
     }
     
     /// Returns the MIME type string corresponding to the file format.
-    var mimeType: String {
+    public var mimeType: String {
         switch self {
         case .jpeg:
             return "image/jpeg"

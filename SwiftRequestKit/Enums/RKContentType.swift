@@ -10,7 +10,7 @@
 ///
 /// Content types (also known as MIME types) help to specify the nature and format of the data in HTTP requests and responses.
 /// By using the "Content-Type" header, systems can interpret the data appropriately, be it for parsing JSON or for processing file uploads.
-enum RKContentType {
+public enum RKContentType {
     
     // MARK: - Cases
     
@@ -26,7 +26,7 @@ enum RKContentType {
     // MARK: - Properties
     
     /// Returns the MIME type string corresponding to the content type.
-    var value: String {
+    public var value: String {
         switch self {
         case .json:
             return "application/json"
@@ -36,4 +36,5 @@ enum RKContentType {
             return "multipart/form-data; boundary=\(boundary)"
         }
     }
+    
 }

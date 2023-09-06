@@ -7,7 +7,7 @@
 //
 
 /// Represents various accept types for a network request.
-enum RKAcceptType: String {
+public enum RKAcceptType: String {
     
     // MARK: - Cases
     
@@ -31,7 +31,8 @@ enum RKAcceptType: String {
     // MARK: - Properties
     
     /// Returns the string representation of the accept type.
-    var value: String {
+    public var value: String {
         return rawValue
     }
+    
 }

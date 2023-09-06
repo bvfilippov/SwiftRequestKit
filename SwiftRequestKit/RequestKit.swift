@@ -8,7 +8,7 @@
 
 import Foundation
 
-class RequestKit {
+public class RequestKit {
 
     // MARK: - Core Properties
         
@@ -41,53 +41,53 @@ class RequestKit {
 
     // MARK: - Initializers
     
-    init(url: String, with type: RKRequestType) {
+    public init(url: String, with type: RKRequestType) {
         self.url = url
         self.type = type
     }
     
     // MARK: - Header and Content Builder Methods
     
-    func setHeaders(_ headers: [String : String]) -> RequestKit {
+    public func setHeaders(_ headers: [String : String]) -> RequestKit {
         self.headers = headers
         return self
     }
     
-    func setCharsetType(_ charsetType: RKCharacterSetType) -> RequestKit {
+    public func setCharsetType(_ charsetType: RKCharacterSetType) -> RequestKit {
         self.charsetType = charsetType
         return self
     }
     
-    func setAcceptType(_ acceptType: RKAcceptType) -> RequestKit {
+    public func setAcceptType(_ acceptType: RKAcceptType) -> RequestKit {
         self.acceptType = acceptType
         return self
     }
     
-    func setContentType(_ contentType: RKContentType) -> RequestKit {
+    public func setContentType(_ contentType: RKContentType) -> RequestKit {
         self.contentType = contentType
         return self
     }
     
-    func setAcceptLanguage(_ acceptLanguage: String) -> RequestKit {
+    public func setAcceptLanguage(_ acceptLanguage: String) -> RequestKit {
         self.acceptLanguage = acceptLanguage
         return self
     }
     
     // MARK: - Parameter Builder Methods
     
-    func setParameters(_ parameters: Codable) -> RequestKit {
+    public func setParameters(_ parameters: Codable) -> RequestKit {
         self.codableParameters = parameters
         return self
     }
     
-    func setParameters(_ parameters: [String : Any]) -> RequestKit {
+    public func setParameters(_ parameters: [String : Any]) -> RequestKit {
         self.dictionaryParameters = parameters
         return self
     }
     
     // MARK: - Media Builder Methods
     
-    func setMedia(_ media: Data, with name: String) -> RequestKit {
+    public func setMedia(_ media: Data, with name: String) -> RequestKit {
         self.media = media
         self.mediaName = name
         return self
@@ -95,26 +95,26 @@ class RequestKit {
     
     // MARK: - Miscellaneous Builder Methods
     
-    func setQueue(_ queue: DispatchQueue) -> RequestKit {
+    public func setQueue(_ queue: DispatchQueue) -> RequestKit {
         self.queue = queue
         return self
     }
     
-    func setRepairMode(_ repairMode: Bool) -> RequestKit {
+    public func setRepairMode(_ repairMode: Bool) -> RequestKit {
         self.repairMode = repairMode
         return self
     }
     
     // MARK: - Network Service Methods
     
-    func downloadData(completion: @escaping (Data?, Int?, RKError?) -> ()) -> URLSessionDataTask? {
+    public func downloadData(completion: @escaping (Data?, Int?, RKError?) -> ()) -> URLSessionDataTask? {
         let request = configurateRequest()
         networkService = RKNetworkService(queue: queue, repairMode: repairMode)
         networkService?.downloadData(with: request, completion: completion)
         return networkService?.sessionDataTask
     }
     
-    func sendRequest<Type: Codable>(completion: @escaping (Type?, Int?, RKError?) -> Void) -> URLSessionDataTask? {
+    public func sendRequest<Type: Codable>(completion: @escaping (Type?, Int?, RKError?) -> Void) -> URLSessionDataTask? {
         let request = configurateRequest()
         networkService = RKNetworkService(queue: queue, repairMode: repairMode)
         networkService?.sendRequest(with: request, completion: completion)

@@ -10,7 +10,7 @@
 ///
 /// HTTP methods, also known as request methods, indicate the desired action to be performed on the resource identified by a given request URL.
 /// Different methods can incur different side-effects on the resource.
-enum RKRequestType: String {
+public enum RKRequestType: String {
     
     // MARK: - Cases
     

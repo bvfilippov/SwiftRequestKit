@@ -11,7 +11,7 @@
 /// This enumeration provides commonly used character sets. It can be extended to include more character sets as required.
 ///
 /// - Note: This is not an exhaustive list.
-enum RKCharacterSetType: String, CaseIterable {
+public enum RKCharacterSetType: String, CaseIterable {
     
     // MARK: - Cases
     
@@ -37,7 +37,7 @@ enum RKCharacterSetType: String, CaseIterable {
     // MARK: - Properties
     
     /// The string representation of the character set.
-    var value: String {
+    public var value: String {
         return rawValue
     }
     

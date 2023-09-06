@@ -12,7 +12,7 @@ import Foundation
 ///
 /// Conforming to the `Error` protocol, it provides diagnostic properties and user-friendly messages
 /// to handle server-related issues more gracefully.
-enum RKError: Error {
+public enum RKError: Error {
     
     // MARK: - Error Variants
     
@@ -34,7 +34,7 @@ enum RKError: Error {
     // MARK: - Diagnostic Properties
     
     /// Checks if the error is a result of a server response without content.
-    var isResponseEmpty: Bool {
+    public var isResponseEmpty: Bool {
         switch self {
         case .responseWithoutContent:
             return true
@@ -44,7 +44,7 @@ enum RKError: Error {
     }
     
     /// Determines if there was a decoding issue with the server response.
-    var hasDecodingIssue: Bool {
+    public var hasDecodingIssue: Bool {
         switch self {
         case .failedToDecodeResponse:
             return true
@@ -54,7 +54,7 @@ enum RKError: Error {
     }
     
     /// A succinct error title suitable for user display.
-    var title: String {
+    public var title: String {
         switch self {
         case .noInternetConnection:
             return "No Internet Connection"
@@ -74,7 +74,7 @@ enum RKError: Error {
     }
     
     /// A more detailed error message suitable for user feedback and debugging.
-    var detailedMessage: String? {
+    public var detailedMessage: String? {
         switch self {
         case .noInternetConnection:
             return "Please check your internet connection and try again."

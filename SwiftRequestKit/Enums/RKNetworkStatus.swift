@@ -7,7 +7,7 @@
 //
 
 /// Represents the network reachability status.
-enum RKNetworkStatus {
+public enum RKNetworkStatus {
     case notReachable
     case reachable
 }
