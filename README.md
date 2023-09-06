@@ -1,33 +1,42 @@
-🚀 SwiftRequestKit: Supercharge Your Network Requests!
 
-📖 Introduction:
-Meet SwiftRequestKit, a robust yet lightweight Swift library crafted for the modern developer. Tackling everything from API interactions, seamless content downloads to intricate file uploads, it streamlines the most complex network operations with elegance.
+# 🚀 SwiftRequestKit: Amplify Your Network Interactions!
 
-✨ Key Features:
+## 📖 Introduction:
+Step into the future of network operations with SwiftRequestKit. It's not just a library—it's your Swiss Army knife for API interactions, from the simplest data fetches to sophisticated file uploads.
 
-Core Configuration: Initiate with ease. Set up your request URL and method without the hassle.
-Headers & Content Mastery: Get granular control over headers, character set, accept types, content types, and even language preferences.
-Powerful Parameter Handling: Whether it's Codable objects or plain dictionaries, manage parameters effortlessly.
-Media Magic: Seamless handling of media data ensures smooth file uploads.
-Thread Management: You're in charge! Decide the dispatch queue for executing your network tasks.
-📦 Installation Guide:
+## ✨ Highlighted Features:
+- **Instant Configuration:** Setting up your request URL and method has never been easier.
+- **Headers & Content Mastery:** Dive deep with unparalleled control over headers, character sets, accept types, content types, and even language settings.
+- **Dynamic Parameter Management:** Whether it's Codable structures or raw dictionaries, handling parameters is a breeze.
+- **Seamless Media Transfers:** Experience flawless media data transfers, ensuring your files upload smoothly every time.
+- **Custom Thread Management:** Take the reins and select the dispatch queue for your network tasks.
 
-CocoaPods:
-SwiftRequestKit effortlessly integrates into your Xcode project via CocoaPods. Simply update your Podfile with:
+## 📦 Integration Guide:
 
-swift
-Copy code
+### CocoaPods:
+Integrate SwiftRequestKit into your Xcode project with ease. Update your Podfile with:
+```swift
 pod 'SwiftRequestKit'
-Afterwards, execute pod install to get started.
+```
+Run `pod install` and you're ready to roll.
 
-Swift Package Manager:
-Detailed instructions coming soon!
+### Swift Package Manager:
+Full guidance on the way!
 
-🎯 Usage:
-Stay tuned for comprehensive examples and use-cases to kickstart your development journey with SwiftRequestKit.
+## 🎯 Quick Start:
+Start using SwiftRequestKit immediately with this straightforward example:
 
-📄 Licensing:
-SwiftRequestKit is proud to be open-source and embraces the MIT License. Dive into the LICENSE file for detailed terms and conditions.
+```swift
+RequestKit(url: "https://api.openweathermap.org/data/2.5/weather", with: .get)
+    .setHeaders(["Authorization": "Bearer \(apiKey)"])
+    .setParameters(["q" : "San Francisco"])
+    .setQueue(.main)
+    .execute(completion: completion)
+```
+Stay tuned for more detailed examples and practical use-cases.
 
-🤝 Join the Journey!:
-Contribute to the evolution of SwiftRequestKit. Whether it's squashing pesky bugs, enhancing the documentation, or bringing in innovative features, every contribution enriches this project. Dive in and make your mark!
+## 📄 Licensing:
+SwiftRequestKit champions the open-source ethos, backed by the MIT License. Refer to the LICENSE file for comprehensive details.
+
+## 🤝 Be a Part of Our Journey:
+Your input makes SwiftRequestKit even more powerful. Whether you're fixing minor glitches, refining the docs, or pitching groundbreaking features—every effort helps this project soar. Dive in and make a lasting impact!

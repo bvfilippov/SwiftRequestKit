@@ -8,39 +8,55 @@
 
 import Foundation
 
+/// `RequestKit` is a utility class that aids in the creation and execution of HTTP requests.
 public class RequestKit {
 
     // MARK: - Core Properties
         
+    /// The URL endpoint for the request.
     private let url: String
+    /// Type of HTTP request (e.g., GET, POST, PUT, etc.).
     private let type: RKRequestType
 
     // MARK: - Header and Content Properties
     
+    /// Custom headers to be included in the request.
     private var headers: [String : String]?
+    /// Character set used for encoding the request.
     private var charsetType: RKCharacterSetType = .utf8
+    /// Specifies the expected response format.
     private var acceptType: RKAcceptType = .json
+    /// Specifies the content type of the request body.
     private var contentType: RKContentType = .json
+    /// Language preference for the response.
     private var acceptLanguage = Locale.current.identifier
 
     // MARK: - Parameter Properties
     
+    /// Parameters to be sent with the request in Codable format.
     private var codableParameters: Codable?
+    /// Parameters to be sent with the request in dictionary format.
     private var dictionaryParameters: [String : Any] = [:]
 
     // MARK: - Media Properties
     
+    /// Media data (e.g., images) to be sent with the request.
     private var media: Data?
+    /// Name identifier for the media.
     private var mediaName: String?
 
     // MARK: - Miscellaneous Properties
     
+    /// Service responsible for network operations.
     private var networkService: RKNetworkService?
+    /// Dispatch queue on which network callbacks are executed.
     private var queue: DispatchQueue = .main
-    private var repairMode: Bool = false
+    /// Enables or disables debug mode.
+    private var debugMode: Bool = false
 
     // MARK: - Initializers
     
+    /// Initializes a new `RequestKit` instance with the given URL and request type.
     public init(url: String, with type: RKRequestType) {
         self.url = url
         self.type = type
@@ -48,26 +64,31 @@ public class RequestKit {
     
     // MARK: - Header and Content Builder Methods
     
+    /// Sets custom headers for the request.
     public func setHeaders(_ headers: [String : String]) -> RequestKit {
         self.headers = headers
         return self
     }
     
+    /// Sets the character set for encoding the request.
     public func setCharsetType(_ charsetType: RKCharacterSetType) -> RequestKit {
         self.charsetType = charsetType
         return self
     }
     
+    /// Specifies the expected response format.
     public func setAcceptType(_ acceptType: RKAcceptType) -> RequestKit {
         self.acceptType = acceptType
         return self
     }
     
+    /// Sets the content type of the request body.
     public func setContentType(_ contentType: RKContentType) -> RequestKit {
         self.contentType = contentType
         return self
     }
     
+    /// Sets language preference for the response.
     public func setAcceptLanguage(_ acceptLanguage: String) -> RequestKit {
         self.acceptLanguage = acceptLanguage
         return self
@@ -75,11 +96,13 @@ public class RequestKit {
     
     // MARK: - Parameter Builder Methods
     
+    /// Sets request parameters in Codable format.
     public func setParameters(_ parameters: Codable) -> RequestKit {
         self.codableParameters = parameters
         return self
     }
     
+    /// Sets request parameters in dictionary format.
     public func setParameters(_ parameters: [String : Any]) -> RequestKit {
         self.dictionaryParameters = parameters
         return self
@@ -87,6 +110,7 @@ public class RequestKit {
     
     // MARK: - Media Builder Methods
     
+    /// Sets media data to be sent with the request.
     public func setMedia(_ media: Data, with name: String) -> RequestKit {
         self.media = media
         self.mediaName = name
@@ -95,34 +119,49 @@ public class RequestKit {
     
     // MARK: - Miscellaneous Builder Methods
     
+    /// Sets the dispatch queue for network callbacks.
     public func setQueue(_ queue: DispatchQueue) -> RequestKit {
         self.queue = queue
         return self
     }
     
-    public func setRepairMode(_ repairMode: Bool) -> RequestKit {
-        self.repairMode = repairMode
+    /// Toggles debug mode.
+    public func setDebugMode(_ debugMode: Bool) -> RequestKit {
+        self.debugMode = debugMode
         return self
     }
     
     // MARK: - Network Service Methods
     
-    public func downloadData(completion: @escaping (Data?, Int?, RKError?) -> ()) -> URLSessionDataTask? {
+    /// Executes the request without returning the URLSessionDataTask.
+    public func execute(completion: @escaping (Data?, Int?, RKError?) -> ()) {
+        _ = executeWithDataTask(completion: completion)
+    }
+    
+    /// Executes the request expecting a Codable response without returning the URLSessionDataTask.
+    public func execute<Type: Codable>(completion: @escaping (Type?, Int?, RKError?) -> Void) {
+        _ = executeWithDataTask(completion: completion)
+    }
+    
+    /// Executes the request and returns the URLSessionDataTask.
+    public func executeWithDataTask(completion: @escaping (Data?, Int?, RKError?) -> ()) -> URLSessionDataTask? {
         let request = configurateRequest()
-        networkService = RKNetworkService(queue: queue, repairMode: repairMode)
-        networkService?.downloadData(with: request, completion: completion)
+        networkService = RKNetworkService(queue: queue, debugMode: debugMode)
+        networkService?.execute(with: request, completion: completion)
         return networkService?.sessionDataTask
     }
     
-    public func sendRequest<Type: Codable>(completion: @escaping (Type?, Int?, RKError?) -> Void) -> URLSessionDataTask? {
+    /// Executes the request expecting a Codable response and returns the URLSessionDataTask.
+    public func executeWithDataTask<Type: Codable>(completion: @escaping (Type?, Int?, RKError?) -> Void) -> URLSessionDataTask? {
         let request = configurateRequest()
-        networkService = RKNetworkService(queue: queue, repairMode: repairMode)
-        networkService?.sendRequest(with: request, completion: completion)
+        networkService = RKNetworkService(queue: queue, debugMode: debugMode)
+        networkService?.execute(with: request, completion: completion)
         return networkService?.sessionDataTask
     }
     
     // MARK: - Private Utility Methods
     
+    /// Configures and returns a URLRequest based on the set properties.
     private func configurateRequest() -> URLRequest {
         let urlRequest = URL(string: url.trimmingCharacters(in: CharacterSet.urlFragmentAllowed.inverted)) ?? URL(string: url)!
         var request = URLRequest(url: urlRequest)
@@ -189,4 +228,3 @@ public class RequestKit {
     }
     
 }
-

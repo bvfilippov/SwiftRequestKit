@@ -22,17 +22,17 @@ class RKNetworkService {
     /// DispatchQueue on which the completion handlers will be executed.
     let queue: DispatchQueue
     /// If set to true, debug information will be printed using the RKDebugger.
-    let repairMode: Bool
+    let debugMode: Bool
     
     // MARK: - Initializers
     
     /// Creates a new instance of the network service.
     /// - Parameters:
     ///   - queue: DispatchQueue on which the completion handlers will be executed. Defaults to main.
-    ///   - repairMode: If set to true, enables debug prints.
-    init(queue: DispatchQueue = .main, repairMode: Bool = false) {
+    ///   - debugMode: If set to true, enables debug prints.
+    init(queue: DispatchQueue = .main, debugMode: Bool = false) {
         self.queue = queue
-        self.repairMode = repairMode
+        self.debugMode = debugMode
     }
     
     // MARK: - Methods
@@ -41,9 +41,9 @@ class RKNetworkService {
     /// - Parameters:
     ///   - request: URLRequest to be executed.
     ///   - completion: Completion handler to be called with Data, HTTP status code, or an error.
-    func downloadData(with request: URLRequest, completion: @escaping (Data?, Int?, RKError?) -> ()) {
+    func execute(with request: URLRequest, completion: @escaping (Data?, Int?, RKError?) -> ()) {
         sessionDataTask = session.dataTask(with: request, completionHandler: { (data, response, error) -> Void in
-            if self.repairMode {
+            if self.debugMode {
                 RKDebugger.debug(request: request, sessionDataTask: self.sessionDataTask, responseData: data)
             }
             
@@ -73,14 +73,14 @@ class RKNetworkService {
     /// - Parameters:
     ///   - request: URLRequest to be executed.
     ///   - completion: Completion handler to be called with Decoded data, HTTP status code, or an error.
-    func sendRequest<Type: Codable>(with request: URLRequest, completion: @escaping (Type?, Int?, RKError?) -> Void) {
+    func execute<Type: Codable>(with request: URLRequest, completion: @escaping (Type?, Int?, RKError?) -> Void) {
         guard RKConnectivity.isAvailable else {
             completion(nil, nil, .noInternetConnection)
             return
         }
         
         sessionDataTask = session.dataTask(with: request) { (data, response, error) in
-            if self.repairMode {
+            if self.debugMode {
                 RKDebugger.debug(request: request, sessionDataTask: self.sessionDataTask, responseData: data)
             }
             
