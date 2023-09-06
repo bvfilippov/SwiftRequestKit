@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
                        DESC
   s.homepage         = 'https://philippovs.com'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'Your Name' => 'b@philippovs.com' }
+  s.author           = { 'Bogdan Filippov' => 'bvfilippov@gmail.com' }
   s.source           = { :git => 'https://github.com/bvfilippov/SwiftRequestKit.git', :tag => s.version.to_s }
   
   s.ios.deployment_target = '12.0'

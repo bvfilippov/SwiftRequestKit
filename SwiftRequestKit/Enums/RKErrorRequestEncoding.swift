@@ -1,5 +1,5 @@
 //
-//  RKRequestEncodingError.swift
+//  RKErrorRequestEncoding.swift
 //  ServiceManager
 //
 //  Created by Bogdan Filippov on 9/5/23.
@@ -7,7 +7,7 @@
 //
 
 /// Defines the set of errors that can be thrown by the `RKRequestEncoder`.
-public enum RKRequestEncodingError: Error {
+public enum RKErrorRequestEncoding: Error {
     case encodingFailed
     case invalidURL
 }

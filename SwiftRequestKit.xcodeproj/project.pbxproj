@@ -11,7 +11,7 @@
 		0441DAA12AA71E7B0088A0F2 /* RKMimeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0441DAA02AA71E7B0088A0F2 /* RKMimeType.swift */; };
 		0441DAA32AA723BA0088A0F2 /* RKCharacterSetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0441DAA22AA723BA0088A0F2 /* RKCharacterSetType.swift */; };
 		0441DAA52AA72CDB0088A0F2 /* RKNetworkStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0441DAA42AA72CDB0088A0F2 /* RKNetworkStatus.swift */; };
-		0441DAA72AA72E040088A0F2 /* RKRequestEncodingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0441DAA62AA72E040088A0F2 /* RKRequestEncodingError.swift */; };
+		0441DAA72AA72E040088A0F2 /* RKErrorRequestEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0441DAA62AA72E040088A0F2 /* RKErrorRequestEncoding.swift */; };
 		0441DAA92AA7340B0088A0F2 /* RKDebugger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0441DAA82AA7340B0088A0F2 /* RKDebugger.swift */; };
 		0441DAAB2AA736340088A0F2 /* RKNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0441DAAA2AA736340088A0F2 /* RKNetworkService.swift */; };
 		0441DAAD2AA738BE0088A0F2 /* RequestKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0441DAAC2AA738BE0088A0F2 /* RequestKit.swift */; };
@@ -40,7 +40,7 @@
 		0441DAA02AA71E7B0088A0F2 /* RKMimeType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RKMimeType.swift; sourceTree = "<group>"; };
 		0441DAA22AA723BA0088A0F2 /* RKCharacterSetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RKCharacterSetType.swift; sourceTree = "<group>"; };
 		0441DAA42AA72CDB0088A0F2 /* RKNetworkStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RKNetworkStatus.swift; sourceTree = "<group>"; };
-		0441DAA62AA72E040088A0F2 /* RKRequestEncodingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RKRequestEncodingError.swift; sourceTree = "<group>"; };
+		0441DAA62AA72E040088A0F2 /* RKErrorRequestEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RKErrorRequestEncoding.swift; sourceTree = "<group>"; };
 		0441DAA82AA7340B0088A0F2 /* RKDebugger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RKDebugger.swift; sourceTree = "<group>"; };
 		0441DAAA2AA736340088A0F2 /* RKNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RKNetworkService.swift; sourceTree = "<group>"; };
 		0441DAAC2AA738BE0088A0F2 /* RequestKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestKit.swift; sourceTree = "<group>"; };
@@ -67,14 +67,14 @@
 		0441DA9B2AA71C180088A0F2 /* Enums */ = {
 			isa = PBXGroup;
 			children = (
-				39229A3820C444670068F940 /* RKError.swift */,
 				0441DAAE2AA7835B0088A0F2 /* RKAcceptType.swift */,
-				0441DAA02AA71E7B0088A0F2 /* RKMimeType.swift */,
 				0441DAA22AA723BA0088A0F2 /* RKCharacterSetType.swift */,
 				0441DA9E2AA71DA80088A0F2 /* RKContentType.swift */,
-				39229A3E20C444B60068F940 /* RKRequestType.swift */,
+				39229A3820C444670068F940 /* RKError.swift */,
+				0441DAA62AA72E040088A0F2 /* RKErrorRequestEncoding.swift */,
+				0441DAA02AA71E7B0088A0F2 /* RKMimeType.swift */,
 				0441DAA42AA72CDB0088A0F2 /* RKNetworkStatus.swift */,
-				0441DAA62AA72E040088A0F2 /* RKRequestEncodingError.swift */,
+				39229A3E20C444B60068F940 /* RKRequestType.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -91,9 +91,9 @@
 			isa = PBXGroup;
 			children = (
 				39229A4020C444E40068F940 /* RKConnectivity.swift */,
-				39229A3C20C444A40068F940 /* RKRequestEncoder.swift */,
 				0441DAA82AA7340B0088A0F2 /* RKDebugger.swift */,
 				0441DAAA2AA736340088A0F2 /* RKNetworkService.swift */,
+				39229A3C20C444A40068F940 /* RKRequestEncoder.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -198,7 +198,7 @@
 				0441DAA92AA7340B0088A0F2 /* RKDebugger.swift in Sources */,
 				39229A3F20C444B60068F940 /* RKRequestType.swift in Sources */,
 				0441DAAB2AA736340088A0F2 /* RKNetworkService.swift in Sources */,
-				0441DAA72AA72E040088A0F2 /* RKRequestEncodingError.swift in Sources */,
+				0441DAA72AA72E040088A0F2 /* RKErrorRequestEncoding.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

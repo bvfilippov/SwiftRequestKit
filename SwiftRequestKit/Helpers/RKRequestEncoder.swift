@@ -18,7 +18,7 @@ class RKRequestEncoder {
     /// - Parameters:
     ///   - host: The base URL as a string.
     ///   - parameters: The `Codable` object to be encoded.
-    /// - Throws: `RKRequestEncodingError` in case of invalid URL or encoding failure.
+    /// - Throws: `RKErrorRequestEncoding` in case of invalid URL or encoding failure.
     /// - Returns: A URL object with encoded query parameters.
     static func urlEncode<T: Codable>(_ host: String, parameters: T) throws -> URL {
         let dictionary = try encode(parameters)
@@ -30,15 +30,15 @@ class RKRequestEncoder {
     /// - Parameters:
     ///   - host: The base URL as a string.
     ///   - parameters: The dictionary to be encoded.
-    /// - Throws: `RKRequestEncodingError` in case of invalid URL.
+    /// - Throws: `RKErrorRequestEncoding` in case of invalid URL.
     /// - Returns: A URL object with encoded query parameters.
     static func urlEncode(_ host: String, parameters: [String : Any]) throws -> URL {
         guard var urlComponents = URLComponents(string: host) else {
-            throw RKRequestEncodingError.invalidURL
+            throw RKErrorRequestEncoding.invalidURL
         }
         urlComponents.queryItems = queryItems(from: parameters)
         guard let url = urlComponents.url else {
-            throw RKRequestEncodingError.invalidURL
+            throw RKErrorRequestEncoding.invalidURL
         }
         return url
     }
@@ -67,14 +67,14 @@ class RKRequestEncoder {
     /// Encodes a `Codable` object into a dictionary.
     ///
     /// - Parameter value: The `Codable` object to be encoded.
-    /// - Throws: `RKRequestEncodingError.encodingFailed` if encoding fails.
+    /// - Throws: `RKErrorRequestEncoding.encodingFailed` if encoding fails.
     /// - Returns: A dictionary representation of the object.
     private static func encode<T: Codable>(_ value: T) throws -> [String: Any] {
         let data = try JSONEncoder().encode(value)
         if let dictionary = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as? [String: Any] {
             return dictionary
         } else {
-            throw RKRequestEncodingError.encodingFailed
+            throw RKErrorRequestEncoding.encodingFailed
         }
     }
     
