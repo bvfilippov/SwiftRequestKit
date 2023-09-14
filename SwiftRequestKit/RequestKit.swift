@@ -133,27 +133,27 @@ public class RequestKit {
     
     // MARK: - Network Service Methods
     
-    /// Executes the request without returning the URLSessionDataTask.
-    public func execute(completion: @escaping (Data?, Int?, RKError?) -> ()) {
-        _ = executeWithDataTask(completion: completion)
-    }
-    
-    /// Executes the request expecting a Codable response without returning the URLSessionDataTask.
-    public func execute<Type: Codable>(completion: @escaping (Type?, Int?, RKError?) -> Void) {
-        _ = executeWithDataTask(completion: completion)
-    }
-    
-    /// Executes the request and returns the URLSessionDataTask.
-    public func executeWithDataTask(completion: @escaping (Data?, Int?, RKError?) -> ()) -> URLSessionDataTask? {
-        let request = configurateRequest()
+    /// Executes the request returning the URLSessionDataTask.
+    @discardableResult
+    public func execute(completion: @escaping (Data?, Int?, RKError?) -> ()) -> URLSessionDataTask? {
+        guard let request = configurateRequest() else {
+            completion(nil, nil, .invalidURL)
+            return nil
+        }
+        
         networkService = RKNetworkService(queue: queue, debugMode: debugMode)
         networkService?.execute(with: request, completion: completion)
         return networkService?.sessionDataTask
     }
     
-    /// Executes the request expecting a Codable response and returns the URLSessionDataTask.
-    public func executeWithDataTask<Type: Codable>(completion: @escaping (Type?, Int?, RKError?) -> Void) -> URLSessionDataTask? {
-        let request = configurateRequest()
+    /// Executes the request expecting a Codable response returning the URLSessionDataTask.
+    @discardableResult
+    public func execute<Type: Codable>(completion: @escaping (Type?, Int?, RKError?) -> Void) -> URLSessionDataTask? {
+        guard let request = configurateRequest() else {
+            completion(nil, nil, .invalidURL)
+            return nil
+        }
+        
         networkService = RKNetworkService(queue: queue, debugMode: debugMode)
         networkService?.execute(with: request, completion: completion)
         return networkService?.sessionDataTask
@@ -162,9 +162,15 @@ public class RequestKit {
     // MARK: - Private Utility Methods
     
     /// Configures and returns a URLRequest based on the set properties.
-    private func configurateRequest() -> URLRequest {
-        let urlRequest = URL(string: url.trimmingCharacters(in: CharacterSet.urlFragmentAllowed.inverted)) ?? URL(string: url)!
-        var request = URLRequest(url: urlRequest)
+    private func configurateRequest() -> URLRequest? {
+        guard let encodedURL = url.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else {
+            return nil
+        }
+        guard let url = URL(string: encodedURL) else {
+            return nil
+        }
+        
+        var request = URLRequest(url: url)
         request.httpMethod = type.rawValue
         request.allHTTPHeaderFields = headers
         

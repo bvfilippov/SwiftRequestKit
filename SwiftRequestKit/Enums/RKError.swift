@@ -8,10 +8,6 @@
 
 import Foundation
 
-/// `ServerError` encapsulates common errors that may arise during server interactions.
-///
-/// Conforming to the `Error` protocol, it provides diagnostic properties and user-friendly messages
-/// to handle server-related issues more gracefully.
 public enum RKError: Error {
     
     // MARK: - Error Variants
@@ -30,7 +26,9 @@ public enum RKError: Error {
     case failedConnection
     /// Indicates that the user must be authenticated to perform the given request.
     case authenticationRequired
-    
+    /// Indicates an invalid URL format or structure. (новый комментарий)
+    case invalidURL
+
     // MARK: - Diagnostic Properties
     
     /// Checks if the error is a result of a server response without content.
@@ -70,6 +68,8 @@ public enum RKError: Error {
             return "Connection Issue"
         case .authenticationRequired:
             return "Authentication Needed"
+        case .invalidURL:
+            return "Invalid URL"
         }
     }
     
@@ -88,6 +88,8 @@ public enum RKError: Error {
             return "There was an issue connecting to the server. Please ensure you're connected to the internet and try again."
         case .authenticationRequired:
             return "Please log in to access this feature."
+        case .invalidURL:
+            return "The provided URL seems to be invalid. Please check the address and try again."
         }
     }
     
