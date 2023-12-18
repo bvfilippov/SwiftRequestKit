@@ -1,0 +1,39 @@
+/* 
+  Localizable.strings
+  SwiftRequestKit
+
+  Created by Bogdan Filippov on 12/18/23.
+  Copyright © 2023 Bogdan Filippov. All rights reserved.
+*/
+
+/* No Internet Connection */
+"noInternetConnectionTitle" = "Ei internet-yhteyttä";
+"noInternetConnectionMessage" = "Tarkista internet-yhteytesi ja yritä uudelleen.";
+
+/* Unexpected Server Response */
+"unexpectedResponseCodeTitle" = "Odottamaton palvelinvaste";
+"unexpectedResponseCodeMessage" = "Palvelimessamme näyttää olevan ongelma. Pahoittelemme häiriötä. Yritä myöhemmin uudelleen.";
+
+/* Server Response Empty */
+"responseWithoutContentTitle" = "Palvelimen vastaus ilman sisältöä";
+"responseWithoutContentMessage" = "Palvelin vastasi ilman tietoja. Tämä voi olla väliaikainen ongelma. Yritä uudelleen.";
+
+/* Server Issue */
+"genericServerErrorTitle" = "Palvelinongelma";
+"genericServerErrorMessage" = "Palvelimessamme näyttää olevan ongelma. Pahoittelemme häiriötä. Yritä myöhemmin uudelleen.";
+
+/* Data Processing Issue */
+"failedToDecodeResponseTitle" = "Tietojen käsittelyongelma";
+"failedToDecodeResponseMessage" = "Palvelimelta saatujen tietojen käsittelyssä ilmeni ongelma. Tekniset tiedot: %@.";
+
+/* Connection Issue */
+"failedConnectionTitle" = "Yhteysongelma";
+"failedConnectionMessage" = "Palvelimeen yhdistämisessä ilmeni ongelma. Varmista, että olet yhteydessä internetiin ja yritä uudelleen.";
+
+/* Authentication Needed */
+"authenticationRequiredTitle" = "Tunnistautuminen vaaditaan";
+"authenticationRequiredMessage" = "Kirjaudu sisään käyttääksesi tätä toimintoa.";
+
+/* Invalid URL */
+"invalidURLTitle" = "Virheellinen URL";
+"invalidURLMessage" = "Annettu URL näyttää olevan virheellinen. Tarkista osoite ja yritä uudelleen.";

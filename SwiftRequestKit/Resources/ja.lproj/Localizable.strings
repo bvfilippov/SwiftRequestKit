@@ -1,0 +1,39 @@
+/* 
+  Localizable.strings
+  SwiftRequestKit
+
+  Created by Bogdan Filippov on 12/18/23.
+  Copyright © 2023 Bogdan Filippov. All rights reserved.
+*/
+
+/* No Internet Connection */
+"noInternetConnectionTitle" = "インターネット接続がありません";
+"noInternetConnectionMessage" = "インターネット接続を確認して、再度お試しください。";
+
+/* Unexpected Server Response */
+"unexpectedResponseCodeTitle" = "予期せぬサーバーの応答";
+"unexpectedResponseCodeMessage" = "サーバーに問題があるようです。ご不便をおかけして申し訳ありません。後ほど再度お試しください。";
+
+/* Server Response Empty */
+"responseWithoutContentTitle" = "内容のないサーバーの応答";
+"responseWithoutContentMessage" = "サーバーからデータがない状態で応答がありました。一時的な問題かもしれません。再度お試しください。";
+
+/* Server Issue */
+"genericServerErrorTitle" = "サーバーの問題";
+"genericServerErrorMessage" = "サーバーに問題があるようです。ご不便をおかけして申し訳ありません。後ほど再度お試しください。";
+
+/* Data Processing Issue */
+"failedToDecodeResponseTitle" = "データ処理の問題";
+"failedToDecodeResponseMessage" = "サーバーから受け取ったデータの処理に問題がありました。技術的な詳細：%@。";
+
+/* Connection Issue */
+"failedConnectionTitle" = "接続の問題";
+"failedConnectionMessage" = "サーバーへの接続に問題がありました。インターネットに接続されていることを確認して、再度お試しください。";
+
+/* Authentication Needed */
+"authenticationRequiredTitle" = "認証が必要です";
+"authenticationRequiredMessage" = "この機能にアクセスするにはログインしてください。";
+
+/* Invalid URL */
+"invalidURLTitle" = "無効なURL";
+"invalidURLMessage" = "提供されたURLは無効のようです。アドレスを確認して、再度お試しください。";

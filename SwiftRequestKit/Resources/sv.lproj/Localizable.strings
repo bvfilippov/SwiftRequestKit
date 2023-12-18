@@ -1,0 +1,39 @@
+/* 
+  Localizable.strings
+  SwiftRequestKit
+
+  Created by Bogdan Filippov on 12/18/23.
+  Copyright © 2023 Bogdan Filippov. All rights reserved.
+*/
+
+/* No Internet Connection */
+"noInternetConnectionTitle" = "Ingen internetanslutning";
+"noInternetConnectionMessage" = "Vänligen kontrollera din internetanslutning och försök igen.";
+
+/* Unexpected Server Response */
+"unexpectedResponseCodeTitle" = "Oväntat serversvar";
+"unexpectedResponseCodeMessage" = "Det verkar som att det finns ett problem med vår server. Vi ber om ursäkt för besväret. Vänligen försök igen senare.";
+
+/* Server Response Empty */
+"responseWithoutContentTitle" = "Serversvar utan innehåll";
+"responseWithoutContentMessage" = "Servern svarade utan några data. Detta kan vara ett tillfälligt problem. Vänligen försök igen.";
+
+/* Server Issue */
+"genericServerErrorTitle" = "Serverproblem";
+"genericServerErrorMessage" = "Det verkar som att det finns ett problem med vår server. Vi ber om ursäkt för besväret. Vänligen försök igen senare.";
+
+/* Data Processing Issue */
+"failedToDecodeResponseTitle" = "Problem med databehandling";
+"failedToDecodeResponseMessage" = "Det uppstod ett problem med att behandla de data som mottogs från servern. Tekniska detaljer: %@.";
+
+/* Connection Issue */
+"failedConnectionTitle" = "Anslutningsproblem";
+"failedConnectionMessage" = "Det uppstod ett problem med att ansluta till servern. Se till att du är ansluten till internet och försök igen.";
+
+/* Authentication Needed */
+"authenticationRequiredTitle" = "Autentisering krävs";
+"authenticationRequiredMessage" = "Var god logga in för att få tillgång till denna funktion.";
+
+/* Invalid URL */
+"invalidURLTitle" = "Ogiltig URL";
+"invalidURLMessage" = "Den angivna URL:en verkar vara ogiltig. Vänligen kontrollera adressen och försök igen.";

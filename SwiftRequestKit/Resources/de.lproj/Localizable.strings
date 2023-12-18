@@ -1,0 +1,39 @@
+/* 
+  Localizable.strings
+  SwiftRequestKit
+
+  Created by Bogdan Filippov on 12/18/23.
+  Copyright © 2023 Bogdan Filippov. All rights reserved.
+*/
+
+/* No Internet Connection */
+"noInternetConnectionTitle" = "Keine Internetverbindung";
+"noInternetConnectionMessage" = "Bitte überprüfen Sie Ihre Internetverbindung und versuchen Sie es erneut.";
+
+/* Unexpected Server Response */
+"unexpectedResponseCodeTitle" = "Unerwartete Serverantwort";
+"unexpectedResponseCodeMessage" = "Es scheint ein Problem mit unserem Server zu geben. Wir entschuldigen uns für die Unannehmlichkeiten. Bitte versuchen Sie es später noch einmal.";
+
+/* Server Response Empty */
+"responseWithoutContentTitle" = "Serverantwort ohne Inhalt";
+"responseWithoutContentMessage" = "Der Server hat ohne Daten geantwortet. Dies könnte ein vorübergehendes Problem sein. Bitte versuchen Sie es später noch einmal.";
+
+/* Server Issue */
+"genericServerErrorTitle" = "Serverproblem";
+"genericServerErrorMessage" = "Es scheint ein Problem mit unserem Server zu geben. Wir entschuldigen uns für die Unannehmlichkeiten. Bitte versuchen Sie es später noch einmal.";
+
+/* Data Processing Issue */
+"failedToDecodeResponseTitle" = "Problem bei der Datenverarbeitung";
+"failedToDecodeResponseMessage" = "Es gab ein Problem bei der Verarbeitung der vom Server erhaltenen Daten. Technische Details: %@.";
+
+/* Connection Issue */
+"failedConnectionTitle" = "Verbindungsproblem";
+"failedConnectionMessage" = "Es gab ein Problem bei der Verbindung zum Server. Stellen Sie sicher, dass Sie mit dem Internet verbunden sind und versuchen Sie es erneut.";
+
+/* Authentication Needed */
+"authenticationRequiredTitle" = "Authentifizierung erforderlich";
+"authenticationRequiredMessage" = "Bitte melden Sie sich an, um auf diese Funktion zuzugreifen.";
+
+/* Invalid URL */
+"invalidURLTitle" = "Ungültige URL";
+"invalidURLMessage" = "Die angegebene URL scheint ungültig zu sein. Bitte überprüfen Sie die Adresse und versuchen Sie es erneut.";

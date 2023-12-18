@@ -1,0 +1,39 @@
+/* 
+  Localizable.strings
+  SwiftRequestKit
+
+  Created by Bogdan Filippov on 12/18/23.
+  Copyright © 2023 Bogdan Filippov. All rights reserved.
+*/
+
+/* No Internet Connection */
+"noInternetConnectionTitle" = "Žiadne internetové pripojenie";
+"noInternetConnectionMessage" = "Skontrolujte svoje internetové pripojenie a skúste to znova.";
+
+/* Unexpected Server Response */
+"unexpectedResponseCodeTitle" = "Neočakávaná odpoveď servera";
+"unexpectedResponseCodeMessage" = "Zdá sa, že máme problém s našim serverom. Ospravedlňujeme sa za nepríjemnosti. Skúste to prosím neskôr.";
+
+/* Server Response Empty */
+"responseWithoutContentTitle" = "Odpoveď servera bez obsahu";
+"responseWithoutContentMessage" = "Server odpovedal bez akýchkoľvek údajov. Môže ísť o dočasný problém. Skúste to prosím neskôr.";
+
+/* Server Issue */
+"genericServerErrorTitle" = "Problém so serverom";
+"genericServerErrorMessage" = "Zdá sa, že máme problém s našim serverom. Ospravedlňujeme sa za nepríjemnosti. Skúste to prosím neskôr.";
+
+/* Data Processing Issue */
+"failedToDecodeResponseTitle" = "Problém so spracovaním údajov";
+"failedToDecodeResponseMessage" = "Vyskytol sa problém pri spracovaní údajov prijatých od servera. Technické detaily: %@.";
+
+/* Connection Issue */
+"failedConnectionTitle" = "Problém s pripojením";
+"failedConnectionMessage" = "Vyskytol sa problém s pripojením k serveru. Uistite sa, že ste pripojení k internetu a skúste to znova.";
+
+/* Authentication Needed */
+"authenticationRequiredTitle" = "Vyžaduje sa autentifikácia";
+"authenticationRequiredMessage" = "Pre prístup k tejto funkcií sa, prosím, prihláste.";
+
+/* Invalid URL */
+"invalidURLTitle" = "Neplatná URL";
+"invalidURLMessage" = "Zadaná URL adresa sa zdá byť neplatná. Skontrolujte adresu a skúste to znova.";

@@ -1,0 +1,39 @@
+/* 
+  Localizable.strings
+  SwiftRequestKit
+
+  Created by Bogdan Filippov on 12/18/23.
+  Copyright © 2023 Bogdan Filippov. All rights reserved.
+*/
+
+/* No Internet Connection */
+"noInternetConnectionTitle" = "ไม่มีการเชื่อมต่ออินเทอร์เน็ต";
+"noInternetConnectionMessage" = "กรุณาตรวจสอบการเชื่อมต่ออินเทอร์เน็ตของคุณและลองอีกครั้ง";
+
+/* Unexpected Server Response */
+"unexpectedResponseCodeTitle" = "การตอบสนองจากเซิร์ฟเวอร์ที่ไม่คาดคิด";
+"unexpectedResponseCodeMessage" = "ดูเหมือนว่าจะมีปัญหากับเซิร์ฟเวอร์ของเรา ขออภัยในความไม่สะดวก กรุณาลองใหม่ในภายหลัง";
+
+/* Server Response Empty */
+"responseWithoutContentTitle" = "การตอบกลับจากเซิร์ฟเวอร์ไม่มีเนื้อหา";
+"responseWithoutContentMessage" = "เซิร์ฟเวอร์ตอบกลับโดยไม่มีข้อมูลใดๆ อาจเป็นปัญหาชั่วคราว กรุณาลองใหม่";
+
+/* Server Issue */
+"genericServerErrorTitle" = "ปัญหาเซิร์ฟเวอร์";
+"genericServerErrorMessage" = "ดูเหมือนว่าจะมีปัญหากับเซิร์ฟเวอร์ของเรา ขออภัยในความไม่สะดวก กรุณาลองใหม่ในภายหลัง";
+
+/* Data Processing Issue */
+"failedToDecodeResponseTitle" = "ปัญหาในการประมวลผลข้อมูล";
+"failedToDecodeResponseMessage" = "มีปัญหาในการประมวลผลข้อมูลที่ได้รับจากเซิร์ฟเวอร์ รายละเอียดทางเทคนิค: %@";
+
+/* Connection Issue */
+"failedConnectionTitle" = "ปัญหาการเชื่อมต่อ";
+"failedConnectionMessage" = "มีปัญหาในการเชื่อมต่อกับเซิร์ฟเวอร์ กรุณาตรวจสอบว่าคุณเชื่อมต่ออินเทอร์เน็ตและลองอีกครั้ง";
+
+/* Authentication Needed */
+"authenticationRequiredTitle" = "ต้องการการยืนยันตัวตน";
+"authenticationRequiredMessage" = "กรุณาเข้าสู่ระบบเพื่อเข้าถึงฟีเจอร์นี้";
+
+/* Invalid URL */
+"invalidURLTitle" = "URL ไม่ถูกต้อง";
+"invalidURLMessage" = "URL ที่ให้มาดูเหมือนจะไม่ถูกต้อง กรุณาตรวจสอบที่อยู่และลองอีกครั้ง";

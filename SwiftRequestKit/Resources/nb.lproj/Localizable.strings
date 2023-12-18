@@ -1,0 +1,39 @@
+/* 
+  Localizable.strings
+  SwiftRequestKit
+
+  Created by Bogdan Filippov on 12/18/23.
+  Copyright © 2023 Bogdan Filippov. All rights reserved.
+*/
+
+/* No Internet Connection */
+"noInternetConnectionTitle" = "Ingen internettforbindelse";
+"noInternetConnectionMessage" = "Vennligst sjekk din internettforbindelse og prøv igjen.";
+
+/* Unexpected Server Response */
+"unexpectedResponseCodeTitle" = "Uventet serverrespons";
+"unexpectedResponseCodeMessage" = "Det ser ut til å være et problem med serveren vår. Vi beklager ulempene. Vennligst prøv igjen senere.";
+
+/* Server Response Empty */
+"responseWithoutContentTitle" = "Serverrespons uten innhold";
+"responseWithoutContentMessage" = "Serveren svarte uten noen data. Dette kan være en midlertidig feil. Vennligst prøv igjen.";
+
+/* Server Issue */
+"genericServerErrorTitle" = "Serverproblem";
+"genericServerErrorMessage" = "Det ser ut til å være et problem med serveren vår. Vi beklager ulempene. Vennligst prøv igjen senere.";
+
+/* Data Processing Issue */
+"failedToDecodeResponseTitle" = "Problem med databehandling";
+"failedToDecodeResponseMessage" = "Det oppsto et problem med å behandle dataene mottatt fra serveren. Tekniske detaljer: %@.";
+
+/* Connection Issue */
+"failedConnectionTitle" = "Tilkoblingsproblem";
+"failedConnectionMessage" = "Det oppsto et problem med å koble til serveren. Sørg for at du er koblet til internett og prøv igjen.";
+
+/* Authentication Needed */
+"authenticationRequiredTitle" = "Autentisering nødvendig";
+"authenticationRequiredMessage" = "Vennligst logg inn for å få tilgang til denne funksjonen.";
+
+/* Invalid URL */
+"invalidURLTitle" = "Ugyldig URL";
+"invalidURLMessage" = "Den oppgitte URL-en ser ut til å være ugyldig. Vennligst sjekk adressen og prøv igjen.";

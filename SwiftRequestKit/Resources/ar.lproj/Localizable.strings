@@ -1,0 +1,39 @@
+/* 
+  Localizable.strings
+  SwiftRequestKit
+
+  Created by Bogdan Filippov on 12/18/23.
+  Copyright © 2023 Bogdan Filippov. All rights reserved.
+*/
+
+/* No Internet Connection */
+"noInternetConnectionTitle" = "لا يوجد اتصال بالإنترنت";
+"noInternetConnectionMessage" = "الرجاء التحقق من اتصالك بالإنترنت والمحاولة مجدداً.";
+
+/* Unexpected Server Response */
+"unexpectedResponseCodeTitle" = "استجابة غير متوقعة من الخادم";
+"unexpectedResponseCodeMessage" = "يبدو أن هناك مشكلة مع خادمنا. نعتذر عن الإزعاج. الرجاء المحاولة مرة أخرى بعد بعض الوقت.";
+
+/* Server Response Empty */
+"responseWithoutContentTitle" = "استجابة الخادم فارغة";
+"responseWithoutContentMessage" = "استجاب الخادم بدون أي بيانات. قد يكون هذا خللاً مؤقتاً. الرجاء المحاولة مرة أخرى.";
+
+/* Server Issue */
+"genericServerErrorTitle" = "مشكلة في الخادم";
+"genericServerErrorMessage" = "يبدو أن هناك مشكلة مع خادمنا. نعتذر عن الإزعاج. الرجاء المحاولة مرة أخرى بعد بعض الوقت.";
+
+/* Data Processing Issue */
+"failedToDecodeResponseTitle" = "مشكلة في معالجة البيانات";
+"failedToDecodeResponseMessage" = "كانت هناك مشكلة في معالجة البيانات التي تم استلامها من الخادم. التفاصيل التقنية: %@.";
+
+/* Connection Issue */
+"failedConnectionTitle" = "مشكلة في الاتصال";
+"failedConnectionMessage" = "كانت هناك مشكلة في الاتصال بالخادم. الرجاء التأكد من اتصالك بالإنترنت والمحاولة مجدداً.";
+
+/* Authentication Needed */
+"authenticationRequiredTitle" = "يتطلب التوثيق";
+"authenticationRequiredMessage" = "الرجاء تسجيل الدخول للوصول إلى هذه الميزة.";
+
+/* Invalid URL */
+"invalidURLTitle" = "عنوان URL غير صالح";
+"invalidURLMessage" = "يبدو أن عنوان URL المقدم غير صالح. الرجاء التحقق من العنوان والمحاولة مجدداً.";

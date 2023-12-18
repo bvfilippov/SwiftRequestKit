@@ -1,0 +1,39 @@
+/* 
+  Localizable.strings
+  SwiftRequestKit
+
+  Created by Bogdan Filippov on 12/18/23.
+  Copyright © 2023 Bogdan Filippov. All rights reserved.
+*/
+
+/* No Internet Connection */
+"noInternetConnectionTitle" = "Geen internetverbinding";
+"noInternetConnectionMessage" = "Controleer uw internetverbinding en probeer het opnieuw.";
+
+/* Unexpected Server Response */
+"unexpectedResponseCodeTitle" = "Onverwachte serverreactie";
+"unexpectedResponseCodeMessage" = "Er lijkt een probleem te zijn met onze server. Onze excuses voor het ongemak. Probeer het later opnieuw.";
+
+/* Server Response Empty */
+"responseWithoutContentTitle" = "Serverreactie zonder inhoud";
+"responseWithoutContentMessage" = "De server reageerde zonder gegevens. Dit kan een tijdelijke storing zijn. Probeer het later opnieuw.";
+
+/* Server Issue */
+"genericServerErrorTitle" = "Serverprobleem";
+"genericServerErrorMessage" = "Er lijkt een probleem te zijn met onze server. Onze excuses voor het ongemak. Probeer het later opnieuw.";
+
+/* Data Processing Issue */
+"failedToDecodeResponseTitle" = "Probleem bij het verwerken van gegevens";
+"failedToDecodeResponseMessage" = "Er was een probleem met het verwerken van de gegevens die van de server zijn ontvangen. Technische details: %@.";
+
+/* Connection Issue */
+"failedConnectionTitle" = "Verbindingsprobleem";
+"failedConnectionMessage" = "Er was een probleem met het verbinden met de server. Zorg ervoor dat u verbonden bent met het internet en probeer het opnieuw.";
+
+/* Authentication Needed */
+"authenticationRequiredTitle" = "Authenticatie vereist";
+"authenticationRequiredMessage" = "Log in om toegang te krijgen tot deze functie.";
+
+/* Invalid URL */
+"invalidURLTitle" = "Ongeldige URL";
+"invalidURLMessage" = "De opgegeven URL lijkt ongeldig. Controleer het adres en probeer het opnieuw.";

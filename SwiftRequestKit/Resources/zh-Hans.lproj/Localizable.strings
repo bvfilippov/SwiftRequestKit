@@ -1,0 +1,39 @@
+/* 
+  Localizable.strings
+  SwiftRequestKit
+
+  Created by Bogdan Filippov on 12/18/23.
+  Copyright © 2023 Bogdan Filippov. All rights reserved.
+*/
+
+/* No Internet Connection */
+"noInternetConnectionTitle" = "无互联网连接";
+"noInternetConnectionMessage" = "请检查您的网络连接然后重试。";
+
+/* Unexpected Server Response */
+"unexpectedResponseCodeTitle" = "服务器响应异常";
+"unexpectedResponseCodeMessage" = "我们的服务器似乎出现了问题。我们为造成的不便深表歉意，请稍后重试。";
+
+/* Server Response Empty */
+"responseWithoutContentTitle" = "服务器响应为空";
+"responseWithoutContentMessage" = "服务器没有返回任何数据。这可能是暂时性故障，请稍后重试。";
+
+/* Server Issue */
+"genericServerErrorTitle" = "服务器问题";
+"genericServerErrorMessage" = "我们的服务器似乎出现了问题。我们为造成的不便深表歉意，请稍后重试。";
+
+/* Data Processing Issue */
+"failedToDecodeResponseTitle" = "数据处理问题";
+"failedToDecodeResponseMessage" = "处理从服务器接收到的数据时出现问题。技术细节：%@。";
+
+/* Connection Issue */
+"failedConnectionTitle" = "连接问题";
+"failedConnectionMessage" = "连接服务器时出现问题。请确保您已连接到互联网然后重试。";
+
+/* Authentication Needed */
+"authenticationRequiredTitle" = "需要认证";
+"authenticationRequiredMessage" = "请登录以访问此功能。";
+
+/* Invalid URL */
+"invalidURLTitle" = "无效的 URL";
+"invalidURLMessage" = "提供的 URL 似乎无效。请检查地址后重试。";

@@ -1,0 +1,39 @@
+/* 
+  Localizable.strings
+  SwiftRequestKit
+
+  Created by Bogdan Filippov on 12/18/23.
+  Copyright © 2023 Bogdan Filippov. All rights reserved.
+*/
+
+/* No Internet Connection */
+"noInternetConnectionTitle" = "Καμία σύνδεση στο Ίντερνετ";
+"noInternetConnectionMessage" = "Παρακαλώ ελέγξτε τη σύνδεσή σας στο Ίντερνετ και δοκιμάστε ξανά.";
+
+/* Unexpected Server Response */
+"unexpectedResponseCodeTitle" = "Απροσδόκητη απόκριση διακομιστή";
+"unexpectedResponseCodeMessage" = "Φαίνεται να υπάρχει πρόβλημα με τον διακομιστή μας. Ζητούμε συγγνώμη για την ταλαιπωρία. Παρακαλώ δοκιμάστε ξανά αργότερα.";
+
+/* Server Response Empty */
+"responseWithoutContentTitle" = "Απόκριση διακομιστή χωρίς περιεχόμενο";
+"responseWithoutContentMessage" = "Ο διακομιστής απάντησε χωρίς δεδομένα. Αυτό μπορεί να είναι προσωρινό πρόβλημα. Παρακαλώ δοκιμάστε ξανά.";
+
+/* Server Issue */
+"genericServerErrorTitle" = "Πρόβλημα διακομιστή";
+"genericServerErrorMessage" = "Φαίνεται να υπάρχει πρόβλημα με τον διακομιστή μας. Ζητούμε συγγνώμη για την ταλαιπωρία. Παρακαλώ δοκιμάστε ξανά αργότερα.";
+
+/* Data Processing Issue */
+"failedToDecodeResponseTitle" = "Πρόβλημα επεξεργασίας δεδομένων";
+"failedToDecodeResponseMessage" = "Υπήρξε πρόβλημα κατά την επεξεργασία των δεδομένων που λήφθηκαν από τον διακομιστή. Τεχνικές λεπτομέρειες: %@.";
+
+/* Connection Issue */
+"failedConnectionTitle" = "Πρόβλημα σύνδεσης";
+"failedConnectionMessage" = "Υπήρξε πρόβλημα στη σύνδεση με τον διακομιστή. Βεβαιωθείτε ότι είστε συνδεδεμένοι στο Ίντερνετ και δοκιμάστε ξανά.";
+
+/* Authentication Needed */
+"authenticationRequiredTitle" = "Απαιτείται Επικύρωση";
+"authenticationRequiredMessage" = "Παρακαλώ συνδεθείτε για να έχετε πρόσβαση σε αυτή τη λειτουργία.";
+
+/* Invalid URL */
+"invalidURLTitle" = "Μη έγκυρο URL";
+"invalidURLMessage" = "Το παρεχόμενο URL φαίνεται να είναι μη έγκυρο. Παρακαλώ ελέγξτε τη διεύθυνση και δοκιμάστε ξανά.";

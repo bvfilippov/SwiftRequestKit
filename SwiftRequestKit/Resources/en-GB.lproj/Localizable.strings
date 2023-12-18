@@ -1,0 +1,39 @@
+/* 
+  Localizable.strings
+  SwiftRequestKit
+
+  Created by Bogdan Filippov on 12/18/23.
+  Copyright © 2023 Bogdan Filippov. All rights reserved.
+*/
+
+/* No Internet Connection */
+"noInternetConnectionTitle" = "No Internet Connection";
+"noInternetConnectionMessage" = "Please check your internet connection and try again.";
+
+/* Unexpected Server Response */
+"unexpectedResponseCodeTitle" = "Unexpected Server Response";
+"unexpectedResponseCodeMessage" = "There seems to be an issue with our server. We apologize for the inconvenience. Kindly retry after some time.";
+
+/* Server Response Empty */
+"responseWithoutContentTitle" = "Server Response Empty";
+"responseWithoutContentMessage" = "The server responded without any data. This might be a temporary glitch. Please try again.";
+
+/* Server Issue */
+"genericServerErrorTitle" = "Server Issue";
+"genericServerErrorMessage" = "There seems to be an issue with our server. We apologize for the inconvenience. Kindly retry after some time.";
+
+/* Data Processing Issue */
+"failedToDecodeResponseTitle" = "Data Processing Issue";
+"failedToDecodeResponseMessage" = "There was a problem processing the data received from the server. Technical details: %@.";
+
+/* Connection Issue */
+"failedConnectionTitle" = "Connection Issue";
+"failedConnectionMessage" = "There was an issue connecting to the server. Please ensure you're connected to the internet and try again.";
+
+/* Authentication Needed */
+"authenticationRequiredTitle" = "Authentication Needed";
+"authenticationRequiredMessage" = "Please log in to access this feature.";
+
+/* Invalid URL */
+"invalidURLTitle" = "Invalid URL";
+"invalidURLMessage" = "The provided URL seems to be invalid. Please check the address and try again.";

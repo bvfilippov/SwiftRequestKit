@@ -1,0 +1,39 @@
+/* 
+  Localizable.strings
+  SwiftRequestKit
+
+  Created by Bogdan Filippov on 12/18/23.
+  Copyright © 2023 Bogdan Filippov. All rights reserved.
+*/
+
+/* No Internet Connection */
+"noInternetConnectionTitle" = "אין חיבור לאינטרנט";
+"noInternetConnectionMessage" = "בדוק את החיבור לאינטרנט שלך ונסה שוב.";
+
+/* Unexpected Server Response */
+"unexpectedResponseCodeTitle" = "תגובת שרת בלתי צפויה";
+"unexpectedResponseCodeMessage" = "נראה שיש בעיה בשרת שלנו. אנו מתנצלים על האי נוחות. אנא נסה שוב מאוחר יותר.";
+
+/* Server Response Empty */
+"responseWithoutContentTitle" = "תגובת השרת ריקה";
+"responseWithoutContentMessage" = "השרת השיב ללא נתונים. ייתכן שזו בעיה זמנית. אנא נסה שוב.";
+
+/* Server Issue */
+"genericServerErrorTitle" = "בעיה בשרת";
+"genericServerErrorMessage" = "נראה שיש בעיה בשרת שלנו. אנו מתנצלים על האי נוחות. אנא נסה שוב מאוחר יותר.";
+
+/* Data Processing Issue */
+"failedToDecodeResponseTitle" = "בעיה בעיבוד הנתונים";
+"failedToDecodeResponseMessage" = "הייתה בעיה בעיבוד הנתונים שהתקבלו מהשרת. פרטים טכניים: %@.";
+
+/* Connection Issue */
+"failedConnectionTitle" = "בעיה בחיבור";
+"failedConnectionMessage" = "הייתה בעיה בחיבור לשרת. ודא שאתה מחובר לאינטרנט ונסה שוב.";
+
+/* Authentication Needed */
+"authenticationRequiredTitle" = "נדרש אימות";
+"authenticationRequiredMessage" = "אנא התחבר כדי לגשת לתכונה זו.";
+
+/* Invalid URL */
+"invalidURLTitle" = "כתובת URL לא חוקית";
+"invalidURLMessage" = "נראה שכתובת ה-URL שסופקה אינה חוקית. בדוק את הכתובת ונסה שוב.";

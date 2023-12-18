@@ -1,0 +1,39 @@
+/* 
+  Localizable.strings
+  SwiftRequestKit
+
+  Created by Bogdan Filippov on 12/18/23.
+  Copyright © 2023 Bogdan Filippov. All rights reserved.
+*/
+
+/* No Internet Connection */
+"noInternetConnectionTitle" = "Tiada Sambungan Internet";
+"noInternetConnectionMessage" = "Sila periksa sambungan internet anda dan cuba lagi.";
+
+/* Unexpected Server Response */
+"unexpectedResponseCodeTitle" = "Respon Server Tidak Dijangka";
+"unexpectedResponseCodeMessage" = "Sepertinya ada masalah dengan pelayan kami. Kami memohon maaf atas kesulitan ini. Sila cuba lagi kemudian.";
+
+/* Server Response Empty */
+"responseWithoutContentTitle" = "Respon Server Kosong";
+"responseWithoutContentMessage" = "Pelayan memberi respon tanpa data. Ini mungkin masalah sementara. Sila cuba lagi.";
+
+/* Server Issue */
+"genericServerErrorTitle" = "Masalah Pelayan";
+"genericServerErrorMessage" = "Sepertinya ada masalah dengan pelayan kami. Kami memohon maaf atas kesulitan ini. Sila cuba lagi kemudian.";
+
+/* Data Processing Issue */
+"failedToDecodeResponseTitle" = "Masalah Pemprosesan Data";
+"failedToDecodeResponseMessage" = "Terdapat masalah dalam memproses data yang diterima daripada pelayan. Butiran teknikal: %@.";
+
+/* Connection Issue */
+"failedConnectionTitle" = "Masalah Sambungan";
+"failedConnectionMessage" = "Terdapat masalah dalam menyambung ke pelayan. Pastikan anda bersambung ke internet dan cuba lagi.";
+
+/* Authentication Needed */
+"authenticationRequiredTitle" = "Pengesahan Diperlukan";
+"authenticationRequiredMessage" = "Sila log masuk untuk mengakses ciri ini.";
+
+/* Invalid URL */
+"invalidURLTitle" = "URL Tidak Sah";
+"invalidURLMessage" = "URL yang diberikan tampaknya tidak sah. Sila periksa alamatnya dan cuba lagi.";

@@ -1,0 +1,39 @@
+/* 
+  Localizable.strings
+  SwiftRequestKit
+
+  Created by Bogdan Filippov on 12/18/23.
+  Copyright © 2023 Bogdan Filippov. All rights reserved.
+*/
+
+/* No Internet Connection */
+"noInternetConnectionTitle" = "無互聯網連接";
+"noInternetConnectionMessage" = "請檢查您的網絡連接，然後重試。";
+
+/* Unexpected Server Response */
+"unexpectedResponseCodeTitle" = "伺服器響應異常";
+"unexpectedResponseCodeMessage" = "我們的服務器似乎出現了問題。我們對造成的不便深表歉意。請稍後再試。";
+
+/* Server Response Empty */
+"responseWithoutContentTitle" = "服務器響應為空";
+"responseWithoutContentMessage" = "服務器沒有返回任何數據。這可能是暫時性故障。請稍後重試。";
+
+/* Server Issue */
+"genericServerErrorTitle" = "服務器問題";
+"genericServerErrorMessage" = "我們的服務器似乎出現了問題。我們對造成的不便深表歉意。請稍後再試。";
+
+/* Data Processing Issue */
+"failedToDecodeResponseTitle" = "數據處理問題";
+"failedToDecodeResponseMessage" = "處理從服務器收到的數據時出現問題。技術細節：%@。";
+
+/* Connection Issue */
+"failedConnectionTitle" = "連接問題";
+"failedConnectionMessage" = "連接服務器時出現問題。請確保您已連接到互聯網，然後重試。";
+
+/* Authentication Needed */
+"authenticationRequiredTitle" = "需要身份驗證";
+"authenticationRequiredMessage" = "請登錄以訪問此功能。";
+
+/* Invalid URL */
+"invalidURLTitle" = "無效的 URL";
+"invalidURLMessage" = "提供的 URL 似乎無效。請檢查地址後重試。";

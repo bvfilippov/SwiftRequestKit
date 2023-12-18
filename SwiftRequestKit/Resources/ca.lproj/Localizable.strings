@@ -1,0 +1,39 @@
+/* 
+  Localizable.strings
+  SwiftRequestKit
+
+  Created by Bogdan Filippov on 12/18/23.
+  Copyright © 2023 Bogdan Filippov. All rights reserved.
+*/
+
+/* No Internet Connection */
+"noInternetConnectionTitle" = "Sense connexió a Internet";
+"noInternetConnectionMessage" = "Si us plau, comprova la teva connexió a Internet i torna a intentar-ho.";
+
+/* Unexpected Server Response */
+"unexpectedResponseCodeTitle" = "Resposta inesperada del servidor";
+"unexpectedResponseCodeMessage" = "Sembla que hi ha un problema amb el nostre servidor. Disculpeu les molèsties. Si us plau, intenta-ho de nou més tard.";
+
+/* Server Response Empty */
+"responseWithoutContentTitle" = "Resposta del servidor sense contingut";
+"responseWithoutContentMessage" = "El servidor ha respost sense cap dada. Això podria ser una fallada temporal. Si us plau, intenta-ho de nou.";
+
+/* Server Issue */
+"genericServerErrorTitle" = "Problema de servidor";
+"genericServerErrorMessage" = "Sembla que hi ha un problema amb el nostre servidor. Disculpeu les molèsties. Si us plau, intenta-ho de nou més tard.";
+
+/* Data Processing Issue */
+"failedToDecodeResponseTitle" = "Problema en el processament de dades";
+"failedToDecodeResponseMessage" = "Hi ha hagut un problema en processar les dades rebudes del servidor. Detalls tècnics: %@.";
+
+/* Connection Issue */
+"failedConnectionTitle" = "Problema de connexió";
+"failedConnectionMessage" = "Hi ha hagut un problema en connectar-se al servidor. Assegura't d'estar connectat a Internet i torna a intentar-ho.";
+
+/* Authentication Needed */
+"authenticationRequiredTitle" = "Autenticació necessària";
+"authenticationRequiredMessage" = "Si us plau, inicia sessió per accedir a aquesta funció.";
+
+/* Invalid URL */
+"invalidURLTitle" = "URL invàlida";
+"invalidURLMessage" = "L'URL proporcionada sembla ser invàlida. Comprova l'adreça i torna a intentar-ho.";

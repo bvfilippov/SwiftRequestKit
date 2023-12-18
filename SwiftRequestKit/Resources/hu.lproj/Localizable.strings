@@ -1,0 +1,39 @@
+/* 
+  Localizable.strings
+  SwiftRequestKit
+
+  Created by Bogdan Filippov on 12/18/23.
+  Copyright © 2023 Bogdan Filippov. All rights reserved.
+*/
+
+/* No Internet Connection */
+"noInternetConnectionTitle" = "Nincs internetkapcsolat";
+"noInternetConnectionMessage" = "Kérjük, ellenőrizze az internetkapcsolatot, majd próbálja újra.";
+
+/* Unexpected Server Response */
+"unexpectedResponseCodeTitle" = "Váratlan kiszolgálói válasz";
+"unexpectedResponseCodeMessage" = "Úgy tűnik, probléma van a szerverünkkel. Elnézést kérünk a kellemetlenségekért. Kérjük, próbálja meg később.";
+
+/* Server Response Empty */
+"responseWithoutContentTitle" = "Tartalom nélküli szerverválasz";
+"responseWithoutContentMessage" = "A szerver válaszolt, de nem tartalmaz adatokat. Ez egy átmeneti hiba lehet. Kérjük, próbálja meg később.";
+
+/* Server Issue */
+"genericServerErrorTitle" = "Szerverhiba";
+"genericServerErrorMessage" = "Úgy tűnik, probléma van a szerverünkkel. Elnézést kérünk a kellemetlenségekért. Kérjük, próbálja meg később.";
+
+/* Data Processing Issue */
+"failedToDecodeResponseTitle" = "Adatfeldolgozási hiba";
+"failedToDecodeResponseMessage" = "Probléma merült fel a szerverről érkező adatok feldolgozásakor. Technikai részletek: %@.";
+
+/* Connection Issue */
+"failedConnectionTitle" = "Kapcsolódási hiba";
+"failedConnectionMessage" = "Probléma történt a szerverhez való kapcsolódáskor. Győződjön meg róla, hogy csatlakozva van az internethez, majd próbálja újra.";
+
+/* Authentication Needed */
+"authenticationRequiredTitle" = "Hitelesítés szükséges";
+"authenticationRequiredMessage" = "Kérjük, jelentkezzen be a funkció eléréséhez.";
+
+/* Invalid URL */
+"invalidURLTitle" = "Érvénytelen URL";
+"invalidURLMessage" = "A megadott URL érvénytelennek tűnik. Kérjük, ellenőrizze a címet, majd próbálja újra.";

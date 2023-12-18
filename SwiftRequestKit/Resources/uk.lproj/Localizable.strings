@@ -1,0 +1,39 @@
+/* 
+  Localizable.strings
+  SwiftRequestKit
+
+  Created by Bogdan Filippov on 12/18/23.
+  Copyright © 2023 Bogdan Filippov. All rights reserved.
+*/
+
+/* No Internet Connection */
+"noInternetConnectionTitle" = "Немає з'єднання з Інтернетом";
+"noInternetConnectionMessage" = "Будь ласка, перевірте ваше з'єднання з Інтернетом та спробуйте знову.";
+
+/* Unexpected Server Response */
+"unexpectedResponseCodeTitle" = "Несподівана відповідь сервера";
+"unexpectedResponseCodeMessage" = "Здається, є проблема з нашим сервером. Перепрошуємо за незручності. Будь ласка, спробуйте пізніше.";
+
+/* Server Response Empty */
+"responseWithoutContentTitle" = "Відповідь сервера без вмісту";
+"responseWithoutContentMessage" = "Сервер відповів без даних. Це може бути тимчасова проблема. Будь ласка, спробуйте знову.";
+
+/* Server Issue */
+"genericServerErrorTitle" = "Проблема сервера";
+"genericServerErrorMessage" = "Здається, є проблема з нашим сервером. Перепрошуємо за незручності. Будь ласка, спробуйте пізніше.";
+
+/* Data Processing Issue */
+"failedToDecodeResponseTitle" = "Проблема обробки даних";
+"failedToDecodeResponseMessage" = "Виникла проблема при обробці даних, отриманих від сервера. Технічні деталі: %@.";
+
+/* Connection Issue */
+"failedConnectionTitle" = "Проблема з'єднання";
+"failedConnectionMessage" = "Виникла проблема з підключенням до сервера. Переконайтеся, що ви підключені до Інтернету та спробуйте знову.";
+
+/* Authentication Needed */
+"authenticationRequiredTitle" = "Потрібна автентифікація";
+"authenticationRequiredMessage" = "Будь ласка, увійдіть в систему, щоб отримати доступ до цієї функції.";
+
+/* Invalid URL */
+"invalidURLTitle" = "Недійсна URL-адреса";
+"invalidURLMessage" = "Надана URL-адреса здається недійсною. Будь ласка, перевірте адресу та спробуйте знову.";

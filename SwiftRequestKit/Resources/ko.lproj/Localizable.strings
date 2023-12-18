@@ -1,0 +1,39 @@
+/* 
+  Localizable.strings
+  SwiftRequestKit
+
+  Created by Bogdan Filippov on 12/18/23.
+  Copyright © 2023 Bogdan Filippov. All rights reserved.
+*/
+
+/* No Internet Connection */
+"noInternetConnectionTitle" = "인터넷 연결 없음";
+"noInternetConnectionMessage" = "인터넷 연결을 확인하고 다시 시도하세요.";
+
+/* Unexpected Server Response */
+"unexpectedResponseCodeTitle" = "예기치 않은 서버 응답";
+"unexpectedResponseCodeMessage" = "서버에 문제가 있는 것 같습니다. 불편을 드려 죄송합니다. 나중에 다시 시도해 주세요.";
+
+/* Server Response Empty */
+"responseWithoutContentTitle" = "내용 없는 서버 응답";
+"responseWithoutContentMessage" = "서버가 데이터 없이 응답했습니다. 일시적인 문제일 수 있습니다. 다시 시도해 주세요.";
+
+/* Server Issue */
+"genericServerErrorTitle" = "서버 문제";
+"genericServerErrorMessage" = "서버에 문제가 있는 것 같습니다. 불편을 드려 죄송합니다. 나중에 다시 시도해 주세요.";
+
+/* Data Processing Issue */
+"failedToDecodeResponseTitle" = "데이터 처리 문제";
+"failedToDecodeResponseMessage" = "서버에서 받은 데이터를 처리하는 데 문제가 있었습니다. 기술적인 세부 사항: %@.";
+
+/* Connection Issue */
+"failedConnectionTitle" = "연결 문제";
+"failedConnectionMessage" = "서버에 연결하는 데 문제가 있었습니다. 인터넷에 연결되어 있는지 확인하고 다시 시도하세요.";
+
+/* Authentication Needed */
+"authenticationRequiredTitle" = "인증 필요";
+"authenticationRequiredMessage" = "이 기능에 접근하려면 로그인하세요.";
+
+/* Invalid URL */
+"invalidURLTitle" = "잘못된 URL";
+"invalidURLMessage" = "제공된 URL이 유효하지 않은 것 같습니다. 주소를 확인하고 다시 시도하세요.";
