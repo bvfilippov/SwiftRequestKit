@@ -55,21 +55,21 @@ public enum RKError: Error {
     public var title: String {
         switch self {
         case .noInternetConnection:
-            return "No Internet Connection"
+            return "noInternetConnectionTitle"
         case .unexpectedResponseCode:
-            return "Unexpected Server Response"
+            return "unexpectedResponseCodeTitle"
         case .responseWithoutContent:
-            return "Server Response Empty"
+            return "responseWithoutContentTitle"
         case .genericServerError:
-            return "Server Issue"
+            return "genericServerErrorTitle"
         case .failedToDecodeResponse:
-            return "Data Processing Issue"
+            return "failedToDecodeResponseTitle"
         case .failedConnection:
-            return "Connection Issue"
+            return "failedConnectionTitle"
         case .authenticationRequired:
-            return "Authentication Needed"
+            return "authenticationRequiredTitle"
         case .invalidURL:
-            return "Invalid URL"
+            return "invalidURLTitle"
         }
     }
     
@@ -77,19 +77,21 @@ public enum RKError: Error {
     public var detailedMessage: String? {
         switch self {
         case .noInternetConnection:
-            return "Please check your internet connection and try again."
-        case .unexpectedResponseCode, .genericServerError:
-            return "There seems to be an issue with our server. We apologize for the inconvenience. Kindly retry after some time."
+            return "noInternetConnectionMessage"
+        case .unexpectedResponseCode:
+            return "unexpectedResponseCodeMessage"
+        case .genericServerError:
+            return "genericServerErrorMessage"
         case .responseWithoutContent:
-            return "The server responded without any data. This might be a temporary glitch. Please try again."
+            return "responseWithoutContentMessage"
         case .failedToDecodeResponse(let data):
-            return "There was a problem processing the data received from the server. Technical details: \(String(data: data ?? Data(), encoding: .utf8) ?? "N/A")."
+            return "failedToDecodeResponseMessage".localized(withArguments: String(data: data ?? Data(), encoding: .utf8) ?? "N/A")
         case .failedConnection:
-            return "There was an issue connecting to the server. Please ensure you're connected to the internet and try again."
+            return "failedConnectionMessage"
         case .authenticationRequired:
-            return "Please log in to access this feature."
+            return "authenticationRequiredMessage"
         case .invalidURL:
-            return "The provided URL seems to be invalid. Please check the address and try again."
+            return "invalidURLMessage"
         }
     }
     

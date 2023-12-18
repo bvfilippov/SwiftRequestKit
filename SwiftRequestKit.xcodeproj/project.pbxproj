@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		043F3A952B3055280039932B /* RequestKit+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043F3A942B3055280039932B /* RequestKit+String.swift */; };
 		0441DA9F2AA71DA80088A0F2 /* RKContentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0441DA9E2AA71DA80088A0F2 /* RKContentType.swift */; };
 		0441DAA12AA71E7B0088A0F2 /* RKMimeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0441DAA02AA71E7B0088A0F2 /* RKMimeType.swift */; };
 		0441DAA32AA723BA0088A0F2 /* RKCharacterSetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0441DAA22AA723BA0088A0F2 /* RKCharacterSetType.swift */; };
@@ -76,6 +77,7 @@
 		043F3A912B302C000039932B /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		043F3A922B302C030039932B /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/Localizable.strings; sourceTree = "<group>"; };
 		043F3A932B302C060039932B /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Localizable.strings; sourceTree = "<group>"; };
+		043F3A942B3055280039932B /* RequestKit+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RequestKit+String.swift"; sourceTree = "<group>"; };
 		0441DA9E2AA71DA80088A0F2 /* RKContentType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RKContentType.swift; sourceTree = "<group>"; };
 		0441DAA02AA71E7B0088A0F2 /* RKMimeType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RKMimeType.swift; sourceTree = "<group>"; };
 		0441DAA22AA723BA0088A0F2 /* RKCharacterSetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RKCharacterSetType.swift; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				39229A3A20C4447D0068F940 /* RequestKit+Data.swift */,
+				043F3A942B3055280039932B /* RequestKit+String.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -202,7 +205,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 0940;
-				LastUpgradeCheck = 1430;
+				LastUpgradeCheck = 1510;
 				ORGANIZATIONNAME = "Bogdan Filippov";
 				TargetAttributes = {
 					39229A2C20C443E80068F940 = {
@@ -278,6 +281,7 @@
 				39229A4120C444E40068F940 /* RKConnectivity.swift in Sources */,
 				0441DAA52AA72CDB0088A0F2 /* RKNetworkStatus.swift in Sources */,
 				39229A3D20C444A40068F940 /* RKRequestEncoder.swift in Sources */,
+				043F3A952B3055280039932B /* RequestKit+String.swift in Sources */,
 				39229A3920C444670068F940 /* RKError.swift in Sources */,
 				0441DAA32AA723BA0088A0F2 /* RKCharacterSetType.swift in Sources */,
 				39229A3B20C4447D0068F940 /* RequestKit+Data.swift in Sources */,
@@ -347,6 +351,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -382,6 +387,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -409,6 +415,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -444,6 +451,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
