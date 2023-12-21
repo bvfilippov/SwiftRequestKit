@@ -15,7 +15,7 @@ extension String {
     /// A computed property that returns the localized version of the string.
     var localize: String {
         let localizedString = NSLocalizedString(self, comment: "")
-
+        
         if localizedString != self {
             return localizedString
         } else if let code = Locale.current.languageCode, let localized = localize(code), localized != self {
@@ -41,9 +41,7 @@ extension String {
     
     /// Private helper function to localize the string for a specific language code.
     private func localize(_ code: String) -> String? {
-        guard let path = Bundle.main.path(forResource: code, ofType: "lproj"),
-              let bundle = Bundle(path: path) else {
-            // If the bundle for the given language code is not found, return nil.
+        guard let path = Bundle.main.path(forResource: code, ofType: "lproj"), let bundle = Bundle(path: path) else {
             return nil
         }
 

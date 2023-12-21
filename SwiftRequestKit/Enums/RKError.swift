@@ -55,21 +55,21 @@ public enum RKError: Error {
     public var title: String {
         switch self {
         case .noInternetConnection:
-            return "noInternetConnectionTitle"
+            return "noInternetConnectionTitle".localize
         case .unexpectedResponseCode:
-            return "unexpectedResponseCodeTitle"
+            return "unexpectedResponseCodeTitle".localize
         case .responseWithoutContent:
-            return "responseWithoutContentTitle"
+            return "responseWithoutContentTitle".localize
         case .genericServerError:
-            return "genericServerErrorTitle"
+            return "genericServerErrorTitle".localize
         case .failedToDecodeResponse:
-            return "failedToDecodeResponseTitle"
+            return "failedToDecodeResponseTitle".localize
         case .failedConnection:
-            return "failedConnectionTitle"
+            return "failedConnectionTitle".localize
         case .authenticationRequired:
-            return "authenticationRequiredTitle"
+            return "authenticationRequiredTitle".localize
         case .invalidURL:
-            return "invalidURLTitle"
+            return "invalidURLTitle".localize
         }
     }
     
@@ -77,21 +77,21 @@ public enum RKError: Error {
     public var detailedMessage: String? {
         switch self {
         case .noInternetConnection:
-            return "noInternetConnectionMessage"
+            return "noInternetConnectionMessage".localize
         case .unexpectedResponseCode:
-            return "unexpectedResponseCodeMessage"
+            return "unexpectedResponseCodeMessage".localize
         case .genericServerError:
-            return "genericServerErrorMessage"
+            return "genericServerErrorMessage".localize
         case .responseWithoutContent:
-            return "responseWithoutContentMessage"
+            return "responseWithoutContentMessage".localize
         case .failedToDecodeResponse(let data):
             return "failedToDecodeResponseMessage".localized(withArguments: String(data: data ?? Data(), encoding: .utf8) ?? "N/A")
         case .failedConnection:
-            return "failedConnectionMessage"
+            return "failedConnectionMessage".localize
         case .authenticationRequired:
-            return "authenticationRequiredMessage"
+            return "authenticationRequiredMessage".localize
         case .invalidURL:
-            return "invalidURLMessage"
+            return "invalidURLMessage".localize
         }
     }
     
