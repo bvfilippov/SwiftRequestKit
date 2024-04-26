@@ -146,6 +146,23 @@ public class RequestKit {
         return networkService?.sessionDataTask
     }
     
+    /// Executes the request returning the URLSessionDataTask.
+    @discardableResult
+    public func executeAsync<Type: Codable>() async throws -> (Type, Int) {
+        guard let request = configurateRequest() else {
+            throw RKError.invalidURL
+        }
+        
+        do {
+            let networkService = RKNetworkService(queue: queue, debugMode: debugMode)
+            self.networkService = networkService
+            let response: (Type, Int) = try await networkService.executeAsync(with: request)
+            return response
+        } catch {
+            throw error
+        }
+    }
+    
     /// Executes the request expecting a Codable response returning the URLSessionDataTask.
     @discardableResult
     public func execute<Type: Codable>(completion: @escaping (Type?, Int?, RKError?) -> Void) -> URLSessionDataTask? {

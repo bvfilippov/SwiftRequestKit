@@ -114,4 +114,37 @@ class RKNetworkService {
         sessionDataTask?.resume()
     }
     
+    /// Sends a network request and decodes the response into the desired Codable type.
+    /// - Parameters:
+    ///   - request: URLRequest to be executed.
+    ///   - completion: Completion handler to be called with Decoded data, HTTP status code, or an error.
+    func executeAsync<Type: Codable>(with request: URLRequest) async throws -> (Type, Int) {
+        guard RKConnectivity.isAvailable else {
+            throw RKError.noInternetConnection
+        }
+        
+        do {
+            let (data, responseURL) = try await session.data(for: request)
+            if debugMode {
+                RKDebugger.debug(request: request, sessionDataTask: sessionDataTask, responseData: data)
+            }
+            guard let response = responseURL as? HTTPURLResponse else {
+                throw RKError.unexpectedResponseCode
+            }
+            
+            do {
+                let decoder = JSONDecoder()
+                let decodeJSON = try decoder.decode(Type.self, from: data)
+                return (decodeJSON, response.statusCode)
+            } catch {
+                print("Decoding error: \(error.localizedDescription)")
+                RKDebugger.debug(request: request, sessionDataTask: sessionDataTask, responseData: data)
+                throw data.isEmpty ? RKError.responseWithoutContent : RKError.failedToDecodeResponse(data)
+            }
+        } catch {
+            print("Error: \(error.localizedDescription)")
+            throw RKError.basicError(error)
+        }
+    }
+    
 }

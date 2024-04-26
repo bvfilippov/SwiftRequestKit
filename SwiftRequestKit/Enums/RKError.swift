@@ -28,6 +28,8 @@ public enum RKError: Error {
     case authenticationRequired
     /// Indicates an invalid URL format or structure. (новый комментарий)
     case invalidURL
+    /// Basic Response Error
+    case basicError(Error)
 
     // MARK: - Diagnostic Properties
     
@@ -70,6 +72,8 @@ public enum RKError: Error {
             return "authenticationRequiredTitle".localize
         case .invalidURL:
             return "invalidURLTitle".localize
+        case .basicError(let error):
+            return error.localizedDescription
         }
     }
     
@@ -92,6 +96,8 @@ public enum RKError: Error {
             return "authenticationRequiredMessage".localize
         case .invalidURL:
             return "invalidURLMessage".localize
+        case .basicError(let error):
+            return error.localizedDescription
         }
     }
     
